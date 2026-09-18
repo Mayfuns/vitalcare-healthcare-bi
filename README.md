@@ -84,3 +84,28 @@ This project is part of my Data & BI Analytics portfolio.
 
 **Mariam Adetoyi**  
 Data Analyst | Business Intelligence | Healthcare Analytics
+
+
+## Repository structure
+
+```text
+01_dashboard/
+  ├── Dashboard exports and screenshots
+  └── README.md
+
+02_powerbi/
+  ├── Power BI project file (.pbix)
+  ├── DAX measures / model notes
+  └── README.md
+
+03_data/
+  ├── Source and cleaned analytical data
+  ├── Data dictionary
+  └── README.md
+
+04_documentation/
+  ├── Project report / methodology
+  └── README.md
+```
+
+The repository is being organised so the full analytical workflow can be reviewed directly on GitHub rather than relying on external Drive links.
