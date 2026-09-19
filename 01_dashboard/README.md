@@ -8,7 +8,7 @@ This folder contains the three final Power BI report pages used in the VitalCare
 2. **Clinical and Patients Analysis** — patient outcomes, recovery, mortality, bed occupancy and diagnosis-level readmissions.
 3. **Financial Analysis** — revenue, costs, profit, margin, doctor performance and revenue by age group.
 
-## Recommended files
+## Files
 
 ```text
 vitalcare-overview.png
