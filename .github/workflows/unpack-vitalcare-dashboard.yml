@@ -1,0 +1,42 @@
+name: Unpack VitalCare dashboard images
+
+on:
+  push:
+    paths:
+      - '.github/workflows/unpack-vitalcare-dashboard.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Unpack dashboard images
+        shell: bash
+        run: |
+          set -e
+          test -f "01_dashboard/vitalcare-dashboard-pages.zip"
+          tmpdir="$(mktemp -d)"
+          unzip -o "01_dashboard/vitalcare-dashboard-pages.zip" -d "$tmpdir"
+          cp "$tmpdir/vitalcare-overview.png" "01_dashboard/vitalcare-overview.png"
+          cp "$tmpdir/vitalcare-clinical-analysis.png" "01_dashboard/vitalcare-clinical-analysis.png"
+          cp "$tmpdir/vitalcare-financial-analysis.png" "01_dashboard/vitalcare-financial-analysis.png"
+          rm -f "01_dashboard/vitalcare-overview.webp"
+          rm -f "01_dashboard/vitalcare-clinical-analysis.webp"
+          rm -f "01_dashboard/vitalcare-financial-analysis.webp"
+          rm -f "01_dashboard/vitalcare-dashboard-pages.zip"
+
+      - name: Commit extracted images
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Unpack original VitalCare dashboard images"
+            git push
+          fi
