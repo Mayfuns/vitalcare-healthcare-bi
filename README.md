@@ -4,7 +4,17 @@ A Power BI case study analysing hospital operations, clinical outcomes and finan
 
 [View the full portfolio case study](https://mayfuns.github.io/mariam-analytics-portfolio/vitalcare.html)
 
-![VitalCare Power BI dashboard](https://raw.githubusercontent.com/Mayfuns/mariam-analytics-portfolio/main/assets/images/vitalcare.png)
+![VitalCare Healthcare Overview](01_dashboard/vitalcare-overview.png)
+
+## Dashboard pages
+
+The Power BI report contains three pages:
+
+1. [Healthcare Overview](01_dashboard/vitalcare-overview.png)
+2. [Clinical and Patients Analysis](01_dashboard/vitalcare-clinical-analysis.png)
+3. [Financial Analysis](01_dashboard/vitalcare-financial-analysis.png)
+
+Each page can also be viewed directly through the portfolio's dashboard gallery.
 
 ## Project overview
 
